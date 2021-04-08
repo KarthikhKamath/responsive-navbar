@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    transition: .5s;
+}
+body{
+    font-family: poppins;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 2em 4em;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+
+}
+nav ul li{
+    margin: 0 35px;
+}
+.logo {
+    color: black;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.logo span{
+    color: rgb(54, 54, 173);
+} 
+nav ul li a{
+    color: black;
+    font-size: 17px;
+}
+.speak{
+    background-color: blue;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5em;
+    box-shadow: 0px 5px 30px rgb(65 84 241 / 40%);
+    font-size: large;
+    
+    
+}
+.speak:hover{
+    /* box-shadow: 0 10px 100px black; */
+    font-weight: 500;
+    transition: .5s;
+
+}
+nav ul li a:hover{
+    letter-spacing: 1px;
+}
+#check{
+
+    display: none;
+}
+.menu i{
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:1100px){
+    nav{
+        padding-top: 15px;
+    }
+    .menu i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        
+        top: 70px;
+        left: 0;
+        background-color: rgb(23, 1, 24);
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-align: center;
+        left: -100%;
+    }
+    #check:checked ~ ul{
+        left:0;
+        transition: 0.3s;
+    }
+    nav ul li a{
+        color: white;
+        margin: 40px 0;
+    }
+    #check:checked ~ .menu i:before{
+        content: "\f00d";
+    }
+    nav ul li {
+        color: white;
+        margin: 40px 0;
+    }
+    .speak{
+        box-shadow: none;
+    }
+    .menu{
+        display: inline-block;
+    }
+}
+@media (max-width:787px){
+    nav{
+        padding: 1em 2em;
+    }
+}
+@media (max-width:787px){
+    nav{
+        padding: 1em 1em;
+    }
+}
+
+/* NavBar completed */
